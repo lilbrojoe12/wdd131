@@ -7,26 +7,36 @@ body {
     margin: 40px auto;
     padding: 50px;
 }
-p {
+#para1 {
     color: #035f9c;
-    font-size: 1.3em;
+}
+#para2 {
+    text-align: left;
+}
+#para3 {
+    font-style: italic;
+    text-align: left;
 }
 hr {
     height: 1px;
     background-color: #ddd;
-    width: 80%;
-    margin-top: 50px;
+    width: 65%;
+    margin-bottom: 60px;
 }
-h1, h2, p {
+h1, p {
     text-align: center;
 }
 img {
-    width: 50%;
+    width: 40%;
     display: block;
-    margin: 50px auto;
+    margin: 70px auto;
 }
 #explain {
     line-height: 1.5em;
     margin: 0 auto;
-    width: 55%;
+    width: 65%;
+}
+h1 {
+    font-family: "Times New Roman", serif;
+    letter-spacing: 2px; /* To match the spaced-out look on screen */
 }
