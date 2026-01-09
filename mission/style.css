@@ -9,7 +9,6 @@ body {
 }
 #para1 {
     color: #035f9c;
-    /* border-bottom: 1px solid #ddd; */
     margin-bottom: 1px;
 }
 #para2 {
@@ -20,7 +19,6 @@ body {
     text-align: left;
 }
 hr {
-    height: 0px;
     background-color: #ddd;
     width: 65%;
     margin-bottom: 60px;
@@ -41,5 +39,5 @@ img {
 }
 h1 {
     font-family: "Times New Roman", serif;
-    letter-spacing: 2px; /* To match the spaced-out look on screen */
+    letter-spacing: 2px;
 }
