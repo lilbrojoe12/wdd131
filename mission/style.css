@@ -9,6 +9,7 @@ body {
 }
 #para1 {
     color: #035f9c;
+    border-bottom: 1px solid #ddd;
 }
 #para2 {
     text-align: left;
@@ -17,12 +18,12 @@ body {
     font-style: italic;
     text-align: left;
 }
-hr {
+/* hr {
     height: 1px;
     background-color: #ddd;
     width: 65%;
     margin-bottom: 60px;
-}
+} */
 h1, p {
     text-align: center;
 }
