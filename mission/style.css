@@ -42,3 +42,9 @@ h1 {
     font-family: "Times New Roman", serif;
     letter-spacing: 2px;
 }
+li {
+    margin-bottom: 1.5rem;
+}
+li:last-child {
+    margin-bottom: 0;
+}
