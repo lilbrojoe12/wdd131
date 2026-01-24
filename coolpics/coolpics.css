@@ -23,14 +23,14 @@ h2{
 main h2 {
     grid-column: 1 / -1;
 }
-div {
+.card {
     background-color: white;
     padding: 0.3rem;
     margin: 1.2rem auto;
     max-width: 300px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
 }
-div img {
+.card img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
