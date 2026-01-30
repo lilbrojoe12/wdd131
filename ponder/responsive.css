@@ -75,6 +75,7 @@ footer {
     }
     nav {
         text-align: right;
+        display: block !important;
     }
 }
 
