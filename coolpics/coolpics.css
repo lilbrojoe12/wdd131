@@ -39,6 +39,10 @@ main h2 {
 nav a {
     padding: 20px;
     color: white;
+    display: block;
+    text-align: center;
+}
+.hide {
     display: none;
 }
 nav a:hover {
@@ -57,7 +61,7 @@ nav a:hover {
     color: white;
 }
 .menu-btn:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 footer {
     text-align: center;
