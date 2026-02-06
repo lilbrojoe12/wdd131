@@ -112,7 +112,6 @@ nav {
     }
     .movie img {
         margin-left: clamp(2rem, 17vw, 13rem);
-        /* margin: 0; */
     }
     #desc {
         grid-column: 2;
