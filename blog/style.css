@@ -8,6 +8,12 @@ header {
     padding: 1rem;
     text-align: center;
 }
+header::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #ffc107;
+    margin-top: 2.5rem;
+}
 footer {
     padding: 1rem;
     text-align: center;
@@ -61,16 +67,53 @@ nav {
 #desc {
     grid-column: 1/3;
 }
+.stats {
+    text-align: right;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.stats p {
+    margin: 0;
+}
 
 @media (min-width: 600px) {
+    header::after {
+        display: none;
+    }
     .movie {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
+        grid-template-columns: 180px 1fr;
+        column-gap: 2rem;
+        position: relative;
+        max-width: 1000px;
+    }
+    .movie::before {
+        content: "";
+        position: absolute;
+        left: calc(180px + 1rem);
+        top: 0;
+        bottom: 0;
+        border-left: 1px solid #ffc107;
+    }
+    .stats {
+        grid-column: 1;
+        text-align: right;
+        padding-right: 2rem;
+    }
+    .movie h2,
+    .movie img,
+    #desc {
+        grid-column: 2;
+        text-align: left;
     }
     .movie img {
-        grid-row: 1/6;
-        grid-column: 1/2;
+        margin-left: clamp(2rem, 17vw, 13rem);
+        /* margin: 0; */
     }
-
+    #desc {
+        grid-column: 2;
+        max-width: 100%;
+        padding-left: 0;
+    }
 }
