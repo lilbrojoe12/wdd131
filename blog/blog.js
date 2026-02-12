@@ -38,4 +38,22 @@ const articles = [
 		stars: "⭐⭐⭐⭐⭐"
 	}
 ];
-    
+    const bookList = document.querySelector('#book-list');
+    articles.forEach(book => {
+        const article = document.createElement('article');
+        article.className = 'book';
+
+        let html = `
+        <ul class="stats" aria-label="Book details">
+                <li><time datetime="${new Date(book.date).toISOString().split('T')[0]}"><em>${book.date}</em></time></li>
+                <li>Age range: ${book.ages}</li>
+                <li>Genre: ${book.genre}</li>
+                <li><span aria-label="Rating: ${book.stars.length} out of 5 stars" role="img">${book.stars}</span></li>
+            </ul>
+            <h2 id="book-${book.id}">${book.title}</h2>
+            <img src="${book.imgSrc}" alt="${book.imgAlt}">
+            <p id="desc">${book.description}</p>
+        `
+        article.innerHTML = html;
+        bookList.appendChild(article);
+    });
