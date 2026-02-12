@@ -40,25 +40,25 @@ nav {
     color: #b30059;
     text-decoration: none;
 }
-#movie-list {
+#book-list {
     padding: 0 2rem;
 }
-.movie {
+.book {
     padding: 1rem;
     border-radius: 10px;
     max-width: 700px;
     margin: 20px auto;
 }
-.movie h2 {
+.book h2 {
     color: #b30059;
     font-size: 1.5rem;
     text-align: center;
     margin: 20px;
 }
-.movie p {
+.book p {
     padding-left: 20px;
 }
-.movie img {
+.book img {
     max-width: 100%;
     display: block;
     border-radius: 8px;
@@ -84,14 +84,14 @@ nav {
     header::after {
         display: none;
     }
-    .movie {
+    .book {
         display: grid;
         grid-template-columns: 180px 1fr;
         column-gap: 2rem;
         position: relative;
         max-width: 1000px;
     }
-    .movie::before {
+    .book::before {
         content: "";
         position: absolute;
         left: calc(180px + 1rem);
@@ -104,13 +104,13 @@ nav {
         text-align: right;
         padding-right: 2rem;
     }
-    .movie h2,
-    .movie img,
+    .book h2,
+    .book img,
     #desc {
         grid-column: 2;
         text-align: left;
     }
-    .movie img {
+    .book img {
         margin-left: clamp(2rem, 17vw, 13rem);
     }
     #desc {
