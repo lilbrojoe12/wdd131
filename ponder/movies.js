@@ -59,4 +59,4 @@ const movies = [
         article.innerHTML = html;
         movieList.appendChild(article);
     
-    });
+        });
