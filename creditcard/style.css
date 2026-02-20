@@ -18,27 +18,36 @@ form {
   margin-top: 20px;
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+/* .card-container {
   position: relative;
+  width: 420px;
+  height: 260px;
+  margin: 40px auto;
+} */
+ .card-container {
+  position: relative;
+  width: 520px;
+  height: 300px;
+  margin: 40px auto;
 }
 
 /* CARD FRONT */
 .card-front {
   background: #d3d3d3;
-  width: 350px;
+  width: 420px;
+  height: 240px;
+
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  border-radius: 16px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
 
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto auto auto;
-  gap: 10px;
+  gap: 12px;
 
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
 }
 
@@ -47,10 +56,10 @@ form {
   text-align: left;
 }
 
-.card-front input {
-  grid-column: 1 / -1;
+ .card-front input {
+  width: 100%;
   padding: 8px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #999;
 }
 
@@ -66,35 +75,52 @@ form {
   font-size: 1.5rem;
 }
 
-#cardExpiration {
-  grid-column: 1 / -1;
+#cardHolder {
+  width: 85%;
+  height: 20px;
+}
+
+ #cardExpiration {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 70px 70px;
+  gap: 20px;
+  align-items: center;
 }
 
 #cardExpiration label {
   grid-column: 1 / -1;
 }
 
+#cardExpiration input {
+  width: 70px;
+}
+
 /* CARD BACK */
 .card-back {
-  background: #c2c2c2;
-  width: 350px;
+  background: #d3d3d3;
+  width: 420px;
+  height: 240px;
+
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  border-radius: 16px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
 
   position: absolute;
   top: 40px;
-  left: 20px;
+  left: 140px;
+
   z-index: 1;
+
+  display: grid;
+  grid-template-rows: auto auto auto;
+  align-content: start;
 }
 
 .black-strip {
   background: black;
-  height: 40px;
-  margin-bottom: 20px;
+  height: 50px;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .card-back input {
@@ -102,18 +128,29 @@ form {
   padding: 8px;
   border-radius: 6px;
   border: 1px solid #999;
+  justify-self: end;
 }
 
 button {
-  margin-top: 120px;
+  position: absolute;
+  top: 300px;
+  left: 360px;
+
+  background: white;
+  color: black;
   padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  background: #4caf50;
-  color: white;
+
+  border-radius: 10px;
+  border: 2px solid black;
+
   cursor: pointer;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
 }
 
 button:hover {
-  background: #3e8e41;
+  background: #c2c2c2;
+}
+
+.card-back label {
+  text-align: right;
 }
