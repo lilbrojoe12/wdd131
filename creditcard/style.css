@@ -1,41 +1,119 @@
-/* form-demo.css */
 body {
-  font-size: 1.2em;
-}
-form {
-  width: 50%;
-  margin: 0 auto;
-}
-h1, h2 {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
   text-align: center;
 }
-label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  input,
-  select,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc; /* Add a border to make it visually consistent */
-    border-radius: 4px;
-  }
-  button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .errors {
-    white-space: pre-line; /*needed for 2 errors to be on separate lines*/
-    color: red;
-  }
-  .hide {
-    display: none;
-  }
+
+h1 {
+  margin-top: 20px;
+}
+
+.errors {
+  color: red;
+  white-space: pre-line;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  position: relative;
+}
+
+/* CARD FRONT */
+.card-front {
+  background: #d3d3d3;
+  width: 350px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.card-front label {
+  grid-column: 1 / -1;
+  text-align: left;
+}
+
+.card-front input {
+  grid-column: 1 / -1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #999;
+}
+
+.total {
+  grid-column: 1 / 2;
+  text-align: left;
+  font-weight: bold;
+}
+
+.card-icon {
+  grid-column: 2 / 3;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+#cardExpiration {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#cardExpiration label {
+  grid-column: 1 / -1;
+}
+
+/* CARD BACK */
+.card-back {
+  background: #c2c2c2;
+  width: 350px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  z-index: 1;
+}
+
+.black-strip {
+  background: black;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.card-back input {
+  width: 80px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #999;
+}
+
+button {
+  margin-top: 120px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3e8e41;
+}
