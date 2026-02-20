@@ -107,7 +107,7 @@ form {
 
   position: absolute;
   top: 40px;
-  left: 140px;
+  left: 120px;
 
   z-index: 1;
 
@@ -121,6 +121,7 @@ form {
   height: 50px;
   border-radius: 4px;
   margin-bottom: 30px;
+  width: 440px;
 }
 
 .card-back input {
