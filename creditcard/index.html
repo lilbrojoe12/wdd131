@@ -30,54 +30,13 @@
         <input type="text" id="cardNumber" required name="cardNumber" pattern="[0-9]{16}" maxlength="16" required placeholder="1234123412341234">
 
         <label id="cardHolderLabel">CARD HOLDER</label>
-        <label id="expirationLabel">EXPIRATION</label>
-
         <input type="text" id="cardHolder" required placeholder="John Doe">
 
-        <input type="text" id="month" name="expMonth" placeholder="MM" pattern="[0-9]{2}" maxlength="2" required>
-        <input type="text" id="year" name="expYear" placeholder="YY" pattern="[0-9]{2}" maxlength="2" required>
-        <!-- <label for="cardNumber">CARD NUMBER</label>
-        <input 
-          type="text" 
-          id="cardNumber" 
-          name="cardNumber"
-          pattern="[0-9]{16}"
-          maxlength="16"
-          required
-          placeholder="1234123412341234"
-        >
-
-        <label for="cardHolder">CARD HOLDER</label>
-        <input 
-          type="text" 
-          id="cardHolder" 
-          name="cardHolder"
-          required
-          placeholder="John Doe"
-        >
-        <label id="expirationDate">EXPIRATION</label>
-
-        <input
-          type="text"
-          id="month"
-          name="expMonth"
-          placeholder="MM"
-          pattern="[0-9]{2}"
-          maxlength="2"
-          required
-          aria-labelledby="expirationDate"
-        >
-
-        <input
-          type="text"
-          id="year"
-          name="expYear"
-          placeholder="YY"
-          pattern="[0-9]{2}"
-          maxlength="2"
-          required
-          aria-labelledby="expirationDate"
-        > -->
+        <div id="cardExpiration">
+          <label for="expirationDate">EXPIRATION</label>
+          <input type='text' id='month' name="expMonth" placeholder="MM" aria-labelledby="expirationDate">
+          <input type='text' id='year' name="expYear" placeholder="YY" aria-labelledby="expirationDate">
+        </div>
       </div>
 
       <!-- CARD BACK -->

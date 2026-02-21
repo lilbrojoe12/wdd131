@@ -1,6 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
   text-align: center;
 }
 
@@ -18,12 +17,6 @@ form {
   margin-top: 20px;
 }
 
-/* .card-container {
-  position: relative;
-  width: 420px;
-  height: 260px;
-  margin: 40px auto;
-} */
  .card-container {
   position: relative;
   width: 520px;
@@ -69,12 +62,6 @@ form {
   text-align: left;
 }
 
-#expirationLabel {
-  grid-column: 2 / 3;
-  grid-row: 4;
-  text-align: left;
-}
-
 #cardNumberLabel,
 #cardHolderLabel,
 #expirationLabel {
@@ -86,17 +73,31 @@ form {
   grid-row: 5;
 }
 
-#month {
+#cardExpiration {
   grid-column: 2 / 3;
-  grid-row: 5;
-  width: 42%;
+  grid-row: 4 / 6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4px;
+  column-gap: 8px;
+}
+
+#cardExpiration label {
+  grid-column: 1 / -1;
+  text-align: left;
+  align-self: end;
+}
+
+#month,
+#year {
+  width: 90%;
+}
+
+#month {
   justify-self: start;
 }
 
 #year {
-  grid-column: 2 / 3;
-  grid-row: 5;
-  width: 42%;
   justify-self: end;
 }
 
@@ -146,7 +147,7 @@ form {
   padding: 8px;
   border: 1px solid #999;
   justify-self: end;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 button {
@@ -154,7 +155,7 @@ button {
   top: 300px;
   left: 360px;
 
-  background: white;
+  background: #f2f2f2;
   color: black;
   padding: 10px 20px;
 
@@ -172,5 +173,6 @@ button:hover {
 .card-back label {
   text-align: right;
   justify-self: end;
-  margin-right: 20px;
+  margin-right: 40px;
+  margin-top: 60px;
 }
