@@ -43,7 +43,8 @@ form {
 
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 12px;
+  row-gap: 4px;
+  column-gap: 15px;
 
   position: absolute;
   top: 0;
@@ -51,48 +52,64 @@ form {
   z-index: 2;
 }
 
-.card-front label {
-  grid-column: 1 / -1;
+#cardNumberLabel {
+  grid-column: 1 / 2;
+  grid-row: 2;
   text-align: left;
 }
 
- .card-front input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #999;
+#cardNumber {
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+#cardHolderLabel {
+  grid-column: 1 / 2;
+  grid-row: 4;
+  text-align: left;
+}
+
+#expirationLabel {
+  grid-column: 2 / 3;
+  grid-row: 4;
+  text-align: left;
+}
+
+#cardNumberLabel,
+#cardHolderLabel,
+#expirationLabel {
+  align-self: end;
+}
+
+#cardHolder {
+  grid-column: 1 / 2;
+  grid-row: 5;
+}
+
+#month {
+  grid-column: 2 / 3;
+  grid-row: 5;
+  width: 42%;
+  justify-self: start;
+}
+
+#year {
+  grid-column: 2 / 3;
+  grid-row: 5;
+  width: 42%;
+  justify-self: end;
 }
 
 .total {
   grid-column: 1 / 2;
   text-align: left;
-  font-weight: bold;
+  align-self: center;
 }
-
 .card-icon {
   grid-column: 2 / 3;
   text-align: right;
   font-size: 1.5rem;
-}
-
-#cardHolder {
-  width: 85%;
-  height: 20px;
-}
-
- #cardExpiration {
-  display: grid;
-  grid-template-columns: 70px 70px;
-  gap: 20px;
-  align-items: center;
-}
-
-#cardExpiration label {
-  grid-column: 1 / -1;
-}
-
-#cardExpiration input {
-  width: 70px;
+  align-self: center;
 }
 
 /* CARD BACK */
@@ -101,7 +118,7 @@ form {
   width: 420px;
   height: 240px;
 
-  padding: 20px;
+  padding: 20px 30px;
   border-radius: 16px;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
 
@@ -121,15 +138,15 @@ form {
   height: 50px;
   border-radius: 4px;
   margin-bottom: 30px;
-  width: 440px;
+  width: 450px;
 }
 
 .card-back input {
-  width: 80px;
+  width: 55px;
   padding: 8px;
-  border-radius: 6px;
   border: 1px solid #999;
   justify-self: end;
+  margin-right: 20px;
 }
 
 button {
@@ -154,4 +171,6 @@ button:hover {
 
 .card-back label {
   text-align: right;
+  justify-self: end;
+  margin-right: 20px;
 }
