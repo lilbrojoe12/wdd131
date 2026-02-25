@@ -17,7 +17,6 @@ const character = {
 
   levelUp() {
     if (this.health === 0) {
-        alert(`${this.name} cannot level up because they are dead.`);
         return;
     }
     this.level += 1;
