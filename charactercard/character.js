@@ -6,20 +6,23 @@ const character = {
   image: "snortleblat.webp",
 
   attacked() {
+    if (this.health === 0) return;
     this.health -= 20;
-
     if (this.health <= 0) {
-      this.health = 0;
-      alert(`${this.name} has died!`);
+        this.health = 0;
+        alert(`${this.name} has died!`);
     }
-
     updateCard();
-  },
+},
 
   levelUp() {
+    if (this.health === 0) {
+        alert(`${this.name} cannot level up because they are dead.`);
+        return;
+    }
     this.level += 1;
     updateCard();
-  }
+}
 };
 
 const healthElement = document.querySelector(".stats p:nth-child(3)");
