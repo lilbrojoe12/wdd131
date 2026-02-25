@@ -1,5 +1,6 @@
 body {
-    font-family: Palatino Linotype, sans-serif;
+    /* font-family: Palatino Linotype, sans-serif; */
+    font-family: Arial, sans-serif;
     background: #f0f4f8;
 }
 
@@ -37,7 +38,6 @@ body {
 
 .buttons {
     text-align: center;
-    font-family: Palatino Linotype, sans-serif;
 }
 
 button {
