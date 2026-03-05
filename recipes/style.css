@@ -1,7 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Castoro:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.title img {
+    max-width: 150px;
+    grid-column: 1 / 2;
+}
+
+.title h1 {
+    font-size: 5rem;
+    grid-column: 2 / 3;
+}
+
+h1 {
+    font-family: Amatic SC, sans-serif;
+}
+
+.recipe-card {
+    border: 1px solid #888888;
+}
+
 .category {
     border: 1px solid #C2C2C2;
     background-color: #E6E6E6;
     padding: 2px 2px;
     border-radius: 2px;
     font-size: 1rem;
+}
+
+.recipe-details h1 {
+    color: #23B6DB;
 }
