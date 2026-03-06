@@ -21,6 +21,7 @@ body {
 .title h1 {
     font-size: 4rem;
     margin: 0;
+    align-self: flex-end;
 }
 
 .search {
