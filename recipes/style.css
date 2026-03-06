@@ -39,13 +39,12 @@ body {
 .search button {
     border: 1.75px solid black;
     background: white;
-    padding: 8px 12px;
     border-left: none;
     border-radius: 0 5px 5px 0;
 }
 
 .search img {
-    width: 20px;
+    width: 30px;
 }
 
 .divider {
