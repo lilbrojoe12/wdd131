@@ -25,13 +25,11 @@ body {
 
 .search {
     display: flex;
-    justify-content: center;
     margin: 20px;
 }
 
 .search input {
-    width: 60%;
-    max-width: 500px;
+    flex: 1;
     padding: 10px;
     border: 1px solid #888888;
     border-radius: 5px 0 0 5px;
@@ -93,9 +91,7 @@ h1, h2 {
 
 .social {
     display: flex;
-    justify-content: center;
     gap: 10px;
-    margin: 20px 0;
 }
 
 .social img {
@@ -103,9 +99,12 @@ h1, h2 {
 }
 
 footer {
-    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
     font-size: 0.8rem;
-    margin-bottom: 20px;
 }
 
 @media screen and (min-width: 700px) {
