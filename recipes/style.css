@@ -66,7 +66,6 @@ h1, h2 {
 
 .recipe-card img {
     width: 100%;
-    border-radius: 5px;
 }
 
 .category {
@@ -92,13 +91,11 @@ h1, h2 {
 
 .recipe-details p {
     display: none;
-    /* font-size: 0.9rem;
-    line-height: 1.4; */
 }
 
 .social {
     display: flex;
-    gap: 10px;
+    gap: 2px;
     margin-bottom: 20px;
 }
 
@@ -119,11 +116,15 @@ footer {
     .recipe-card {
         display: flex;
         gap: 20px;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .recipe-card img {
-        width: 300px;
+        width: 350px;
+    }
+
+    .category {
+        margin-bottom: 40px;
     }
 
     .recipe-details {
