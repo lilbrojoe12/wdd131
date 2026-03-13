@@ -288,7 +288,8 @@ function recipeTemplate(recipe) {
     return `<section class="recipe-card">
         <img src="${recipe.image}" alt="${recipe.name}">
         <div class="recipe-details">
-            <span class="category">${tagsTemplate(recipe.tags)}</span>
+            <!-- Removed the outer span to prevent mushing tags -->
+            ${tagsTemplate(recipe.tags)}
             <h2>${recipe.name}</h2>
             ${ratingTemplate(recipe.rating)}
             <p>${recipe.description}</p>
@@ -297,7 +298,7 @@ function recipeTemplate(recipe) {
 }
 
 function tagsTemplate(tags) {
-    return tags.map(tag => `<span>${tag}</span>`).join('');
+    return tags.map(tag => `<span class="category">${tag}</span>`).join('');
 }
 
 function ratingTemplate(rating) {
@@ -314,9 +315,9 @@ function ratingTemplate(rating) {
 }
 
 function renderRecipes(recipeList) {
-    const container = document.querySelector('#recipes-container');
-    const html = recipeList.map(recipe => recipeTemplate(recipe)).join('');
-    container.innerHTML = html;
+    recipeContainer.innerHTML = '';
+    const htmlStrings = recipeList.map(recipe => recipeTemplate(recipe));
+    recipeContainer.innerHTML = htmlStrings.join('');
 }
 
 function init() {
@@ -332,17 +333,16 @@ function filterRecipes(query) {
                recipe.tags.find(tag => tag.toLowerCase().includes(q));
     });
 
-    const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
-    return sorted;
+    return filtered.sort((a, b) => a.name.localeCompare(b.name));
 }
 
 function searchHandler(e) {
     e.preventDefault();
-    const query = document.querySelector('#search-input').value;
+    const query = searchInput.value;
     const filteredRecipes = filterRecipes(query);
     renderRecipes(filteredRecipes);
 }
 
-document.querySelector('#search-button').addEventListener('click', searchHandler);
+searchButton.addEventListener('click', searchHandler);
 
 init();
