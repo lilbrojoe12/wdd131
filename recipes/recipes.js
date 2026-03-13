@@ -279,3 +279,70 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+const recipeContainer = document.querySelector('#recipes-container');
+const searchButton = document.querySelector('#search-button');
+const searchInput = document.querySelector('#search-input');
+
+function recipeTemplate(recipe) {
+    return `<section class="recipe-card">
+        <img src="${recipe.image}" alt="${recipe.name}">
+        <div class="recipe-details">
+            <span class="category">${tagsTemplate(recipe.tags)}</span>
+            <h2>${recipe.name}</h2>
+            ${ratingTemplate(recipe.rating)}
+            <p>${recipe.description}</p>
+        </div>
+    </section>`;
+}
+
+function tagsTemplate(tags) {
+    return tags.map(tag => `<span>${tag}</span>`).join('');
+}
+
+function ratingTemplate(rating) {
+    let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`;
+    for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+            html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+        } else {
+            html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+        }
+    }
+    html += `</span>`;
+    return html;
+}
+
+function renderRecipes(recipeList) {
+    const container = document.querySelector('#recipes-container');
+    const html = recipeList.map(recipe => recipeTemplate(recipe)).join('');
+    container.innerHTML = html;
+}
+
+function init() {
+    const randomNum = Math.floor(Math.random() * recipes.length);
+    renderRecipes([recipes[randomNum]]);
+}
+
+function filterRecipes(query) {
+    const filtered = recipes.filter(recipe => {
+        const q = query.toLowerCase();
+        return recipe.name.toLowerCase().includes(q) || 
+               recipe.description.toLowerCase().includes(q) || 
+               recipe.tags.find(tag => tag.toLowerCase().includes(q));
+    });
+
+    const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
+    return sorted;
+}
+
+function searchHandler(e) {
+    e.preventDefault();
+    const query = document.querySelector('#search-input').value;
+    const filteredRecipes = filterRecipes(query);
+    renderRecipes(filteredRecipes);
+}
+
+document.querySelector('#search-button').addEventListener('click', searchHandler);
+
+init();
