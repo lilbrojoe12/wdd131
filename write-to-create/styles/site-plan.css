@@ -1,23 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Quicksand&display=swap");
 
 :root {
-  --primary-color: #2C3E50;
+  --primary-color: #8DAA91;
   --secondary-color: #F4E3D7;
   --accent1-color: #F5A623;
-  --accent2-color: #8DAA91;
+  --accent2-color: #2C3E50;
 
   --heading-font: 'Cormorant Garamond', serif;
   --paragraph-font: 'Quicksand', sans-serif;
 
   --headline-color-on-white: #2C3E50;
-  --headline-color-on-color: #8DAA91;
+  --headline-color-on-color: #2C3E50;
   --paragraph-color-on-white: #2C3E50;
-  --paragraph-color-on-color: #8DAA91;
-  --paragraph-background-color: #2C3E50;
+  --paragraph-color-on-color: #2C3E50;
+  --paragraph-background-color: #8DAA91;
   --nav-link-color: #2C3E50;
   --nav-background-color: #F5A623;
-  --nav-hover-link-color: #8DAA91;
-  --nav-hover-background-color: #2C3E50;
+  --nav-hover-link-color: #2C3E50;
+  --nav-hover-background-color: #8DAA91;
 }
 
 
