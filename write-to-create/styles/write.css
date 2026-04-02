@@ -4,7 +4,7 @@
   --primary-color: #2C3E50;
   --secondary-color: #F4E3D7;
   --accent1-color: #F5A623;
-  --accent2-color: #8DAA91;
+  --accent2-color: #6d8b71;
 
   --heading-font: 'Cormorant Garamond', serif;
   --paragraph-font: 'Quicksand', sans-serif;
@@ -142,7 +142,7 @@ nav ul li a:hover {
 .faq-item h3 {
   margin-bottom: 10px;
   font-family: var(--heading-font);
-  color: var(--primary-color);
+  color: var(--accent1-color);
 }
 
 footer {
