@@ -136,6 +136,7 @@ nav ul li a:hover {
   border-radius: 8px;
   color: white;
   font-family: var(--paragraph-font);
+  font-weight: 600;
 }
 
 .faq-item h3 {
